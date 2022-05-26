@@ -1,11 +1,13 @@
+from itertools import count
+
+
 class Node():
 
     def __init__(self,data) -> None:
         self.data=data
         self.next=None
 
-class Queue(self):
-
+class Queue():
     def __init__(self) -> None:
         self.first=None
         self.last=None
@@ -26,11 +28,15 @@ def Enqueue(self,data):
 
 def DeQueue(self):
     if self.first == self.last:
-        self.first=self.first.next
         self.last=None
-    elif self.first != self.last:
-        self.first=self.first.next
+        self.count-=1
 
-        
-        
+    elif self.last==None:
+        print("Nothing To Print")
+    else:
+        self.first=self.first.next
+        self.count-=1
+def PeekInQueue(self):
+    return self.first.data
+
 
