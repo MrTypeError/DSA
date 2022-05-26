@@ -24,6 +24,6 @@ def Showqueue(self):
     elif len(self.arr1):
         print("There is only one Element : ",self.arr1)
     else:
-        return [i for in in self.arr1[::-1]]
+        return [i for i in in self.arr1[::-1]]
         
         
