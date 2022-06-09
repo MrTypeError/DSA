@@ -19,11 +19,11 @@ def Dqueue(self):
         return self.arr1.pop()
 
 def Showqueue(self):
-    if len(self.arr1) == 0:
+    if len(arr1)==0:
         print("There Are No Element to show ")
-    elif len(self.arr1) == 1:
+    elif len(self.arr1):
         print("There is only one Element : ",self.arr1)
     else:
-        return [i for i in self.arr1[::-1]]
+        return [i for in in self.arr1[::-1]]
         
         
