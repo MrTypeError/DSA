@@ -12,7 +12,7 @@ def Enqueue(self,data):
          item=self.arr2.pop()
          self.arr1.append(item)
 
-def Dqueue(self): #ghgh
+def Dqueue(self):
     if len(self.arr1) == 0:
         print("Under Flow")
     else:
