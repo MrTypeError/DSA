@@ -1,75 +1,70 @@
 from copy import deepcopy
-data=dict(
-            config=dict(
-                access_group=dict(
-                    peer=[
-                        dict(access_list="2", kod=True),
-                        dict(
-                            access_list="preauth_ipv6_acl",
-                            ipv6=True,
-                            kod=True,
-                        ),
-                    ]
-                ),
-                allow=dict(control=dict(rate_limit=4)),
-                authenticate=True,
-                authentication_keys=[
+config=dict(
+            access_group=dict(
+                peer=[
+                    dict(access_list="2", kod=True),
                     dict(
-                        algorithm="md5",
-                        encryption=7,
-                        id=2,
-                        key="SomeSecurePassword",
-                    )
-                ],
-                broadcast_delay=22,
-                logging=True,
-                master=dict(stratum=4),
-                max_associations=34,
-                max_distance=3,
-                min_distance=10,
-                orphan=4,
-                panic_update=True,
-                peers=[
-                    dict(peer="172.16.1.10", version=2),
-                    dict(
-                        key=2,
-                        minpoll=5,
-                        peer="172.16.1.11",
-                        prefer=True,
-                        version=2,
+                        access_list="preauth_ipv6_acl",
+                        ipv6=True,
+                        kod=True,
                     ),
-                    dict(
-                        peer="checkPeerDomainIpv4.com",
-                        prefer=True,
-                        use_ipv4=True,
-                    ),
-                    dict(peer="checkPeerDomainIpv6.com", use_ipv6=True),
-                    dict(
-                        peer="testPeerDomainIpv6.com",
-                        prefer=True,
-                        use_ipv6=True,
-                    ),
-                ],
-                servers=[
-                    dict(server="172.16.1.12", version=2),
-                    dict(server="172.16.1.110", key_id=2),
-                    dict(
-                        server="172.16.1.13", source="GigabitEthernet0/1"
-                    ),
-                    dict(
-                        server="checkServerDomainIpv6.com", use_ipv6=True
-                    ),
-                ],
-                source="GigabitEthernet0/1",
-                trusted_keys=[
-                    dict(range_start=21),
-                    dict(range_end=13, range_start=3),
-                ],
-                update_calendar=True,
+                ]
             ),
-            state="merged",
-        )
-
+            allow=dict(control=dict(rate_limit=4)),
+            authenticate=True,
+            authentication_keys=[
+                dict(
+                    algorithm="md5",
+                    encryption=7,
+                    id=2,
+                    key="SomeSecurePassword",
+                )
+            ],
+            broadcast_delay=22,
+            logging=True,
+            master=dict(stratum=4),
+            max_associations=34,
+            max_distance=3,
+            min_distance=10,
+            orphan=4,
+            panic_update=True,
+            peers=[
+                dict(peer="172.16.1.10", version=2),
+                dict(
+                    key_id=2,
+                    minpoll=5,
+                    peer="172.16.1.11",
+                    prefer=True,
+                    version=2,
+                ),
+                dict(
+                    peer="checkPeerDomainIpv4.com",
+                    prefer=True,
+                    use_ipv4=True,
+                ),
+                dict(peer="checkPeerDomainIpv6.com", use_ipv6=True),
+                dict(
+                    peer="testPeerDomainIpv6.com",
+                    prefer=True,
+                    use_ipv6=True,
+                ),
+            ],
+            servers=[
+                dict(server="172.16.1.12", version=2),
+                dict(
+                    server="172.16.1.13", source="GigabitEthernet0/1"
+                ),
+                dict(
+                    server="checkServerDomainIpv6.com", use_ipv6=True
+                ),
+            ],
+            source="GigabitEthernet0/1",
+            trusted_keys=[
+                dict(range_start=21),
+                dict(range_end=13, range_start=3),
+            ],
+            update_calendar=True,
+        ),
 
 def _ntp_list_to_dict(data):
     """Convert all list of dicts to dicts of dicts"""
@@ -99,4 +94,4 @@ def _ntp_list_to_dict(data):
     return tmp_data
 
 Newdata=_ntp_list_to_dict(data)
-print(Newdata)
+print
