@@ -1,3 +1,6 @@
+from email.errors import NoBoundaryInMultipartDefect
+
+
 def design(num, spc=0,spc2=0):
 
     if num == 0:
@@ -15,15 +18,4 @@ def design(num, spc=0,spc2=0):
             print(((" :) "*spc2) + " " * (num*2-4)*2 + ":" + (str(spc2))))
             design(num-2, spc)
         
-
-
-
-
-
-
-
-
-
-
-
 design(20)
