@@ -11,10 +11,4 @@ for x in enumerate(b):
 
 for index,element in enumerate(c):
     print(index,element)
-
-
-a=[
-    [1,3],
-    [4,7],
-    []
-]
+    

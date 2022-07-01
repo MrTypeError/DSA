@@ -1,7 +1,6 @@
 def f(p):
     return p[1]
-def e(p):
-    return len(p)
+
 a=[
     [1,3],
     [4,7],
@@ -29,6 +28,10 @@ y=sorted(a,key=f) #This sorting will be done w.r.t key=f
                   #sort the elements with respect to the index p[1] Elementk
 print(y)
 
+
+
+def e(p):
+    return len
 b=[
     "axc",
     "deff",
@@ -36,7 +39,29 @@ b=[
     "sdsadsad"
 ]
 
-m=sorted(a)
+m=sorted(b)
 print(m)
-n=sorted(a,key=e)
+# n=sorted(b,key=e)
+n=sorted(b,key=len)
+print(n)
+
+
+
+# Part-1 (ScreenShot-1)
+
+'''One Linear Function is writtern by using lambda'''
+
+b=[
+    "axc",
+    "deff",
+    "xy",
+    "sdsadsad"
+]
+
+m=sorted(b)
+print(m)
+
+
+#custom Sorting Technique
+n=sorted(b,key=lambda x: x[1])
 print(n)
