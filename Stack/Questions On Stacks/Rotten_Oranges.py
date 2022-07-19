@@ -11,7 +11,6 @@ def solve(grid):
 
     if not fresh_oranges:
         return 0
-        #This will be heping in checking the elements 
     directions ={
         (1,0),
         (-1,0),
@@ -22,9 +21,10 @@ def solve(grid):
         ro_i,ro_j,time=rottern_q.pop()
         for di , dj in directions:
             newo_i, newo_j=ro_i+di, ro_j+dj
-            fresh_oranges-=1
-            if  not fresh_oranges:
-                return time+1
-            grid[newo_i][newo_j]=2
-            rottern_q.appendleft((newo_i,newo_j,time+1))
+            if -1<newo_i<m and -1<newo_j<n and grid[newo_i][newo_j]==1:    
+                fresh_oranges-=1
+                if  not fresh_oranges:
+                    return time+1
+                grid[newo_i][newo_j]=2
+                rottern_q.appendleft((newo_i,newo_j,time+1))
     return -1
