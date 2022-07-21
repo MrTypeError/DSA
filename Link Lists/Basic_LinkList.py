@@ -1,6 +1,3 @@
-from itertools import count
-
-
 class Node:
     def __init__(self,data,next=None):
         self.data=data
@@ -25,7 +22,7 @@ def Inseart_Node_End(head,data):
         return Node(data)
     ptr= head
     while ptr.next:
-        ptr= ptr.nextz
+        ptr= ptr.next
     ptr.next= Node(data)
     return head
 
@@ -33,6 +30,11 @@ def Inseart_Node_First(head, data ):
     temp=Node(data)
     temp.next=head
     return temp
+
+    # This same function can be written in One line 
+    
+    # return Node(data , head) 
+
 
 
 
