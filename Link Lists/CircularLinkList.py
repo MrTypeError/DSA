@@ -1,6 +1,3 @@
-from ast import While
-
-
 class Node():
     def __init__(self,data) -> None:
         self.data=data
@@ -11,7 +8,7 @@ class CircularLinkList(self):
         self.head=None
     
     def PushInLL(self,data):
-        RealNode=Node(Data)
+        RealNode=Node(data)
         temp=self.head
         if temp.next != None:
             while(temp.next != self.head):

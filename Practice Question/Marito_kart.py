@@ -26,17 +26,56 @@ Output:
 Explanation:
      5 2 is the size of the leaderboard. The second lowest score is 37 and their corresponding players are 2 and 3.
 '''
-mat=[[5,2],
+
+
+def solve(mat):
+    fm = float("inf")
+    sm = float("inf")
+    ans = []
+    for e in mat:
+        if e[1]<fm:
+            sm=fm
+            fm=e[1]
+        elif fm<e[1]<sm:
+            sm=e[1]
+    
+    for e in mat:
+        if e[1]==sm:
+            ans.append(e[0])
+    return sorted(ans)
+
+
+mat=[
+    [5,2],
     [3,37],
     [1,41],
     [2,37],
     [5,41],
-    [4,35]]
-m={}
-for key, value in m:
-    m[key]=value
+    [4,35]
+]
 
-for i in len(mat):
-    for j in len(mat):
-        pass
+newVar=solve(mat)
+print(newVar)
+
+# newDict={}
+
+# for row in mat:
+#     newDict[row[0]]=row[1]
+    # newDict.update({row[0]:row[1]})
+    
+# for key,value in newDict.items():
+
+
+
+# for row in mat:
+#     for col in row:
+#         m.update({col[0]:col[1]})
+
+
+
+
+# for i in mat:
+#     print(i[0])
+#     print(i[1])
+#     print("---")
 
