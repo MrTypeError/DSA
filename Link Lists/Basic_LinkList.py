@@ -35,8 +35,14 @@ def Inseart_Node_First(head, data ):
     
     # return Node(data , head) 
 
-
-
+def Del_Any_Node(head,pos):
+    ptr=head
+    while ptr:
+        count+=1
+        if count==pos-1:
+            ptr.next=ptr.next.next
+        ptr=ptr.next
+        
 
 # a=Node(1)
 # print(a)
