@@ -12,6 +12,7 @@ def ThreeD_Mat(arr , x = 0 ,y = 0, z = 0 ):
             arr.append(temp_arr)
         arr2.append(arr)
     return(arr2)
+    
 while True:
     Choice = input("Enter The Choice : ")
     if Choice == "Y" or  Choice == "y" :
@@ -28,7 +29,6 @@ for i in range(size):
         y = temp_list.pop()
         z = temp_list.pop()
         Ans=ThreeD_Mat(temp_list,x,y,z)
-
 
 
 
