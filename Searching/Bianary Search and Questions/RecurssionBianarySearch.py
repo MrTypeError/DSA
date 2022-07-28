@@ -1,6 +1,3 @@
-from traceback import print_tb
-
-
 def solve(n, arr, x, y):
     SumOfNum = arr[x]
     Temp=0
