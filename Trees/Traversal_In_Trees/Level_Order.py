@@ -20,5 +20,33 @@ def level_order(root ,arr):
         if temp.right:
             q.appendleft(temp.right)
     return arr
+
+###################################################################################################
+                                            # OR
+###################################################################################################
+
+
+def solve(root):
+    q = [root] 
+    ans = []
+
+    while len(q) > 0 :
+        lvl_vals = []
+        for i in range(len(q)):
+            curr = q[0]
+            q = q[1:]
+            lvl_vals.append(curr.val)
+            if curr.left:
+                q.append(curr.left)
+            if curr.right:
+                q.append(curr.right)
+        ans.append(lvl_vals)
+    return ans
+
+
+###################################################################################################
+                                        # FUNCTION CALL
+###################################################################################################
+
 a= Node("A", Node("B" , Node("D") , Node("E")), Node("C" , Node("F"),Node("G")))
 print(level_order(a , []))
