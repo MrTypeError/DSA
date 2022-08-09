@@ -1,7 +1,7 @@
 def heapifyDown(arr ,i ):
     n = len(arr)
     while i < n/2:
-        l ,r = (2*i)-1 , (2*i)+2
+        l ,r = (2*i)+1 , (2*i)+2
         max_idx = l if l<n and arr[l]> arr[i] else i
         max_idx = r if r<n and arr[r]>arr[max_idx] else max_idx
         if max_idx == i:
