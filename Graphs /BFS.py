@@ -18,7 +18,7 @@ def BFS(adj):
             el = q.pop()
             print(el , end="")
             for adjel in range(n):
-                if [el][adjel] and adjel not in vis:
+                if adj[el][adjel] and adjel not in vis:
                     vis.add(adjel)
                     q.appendleft(adjel)
     print()
