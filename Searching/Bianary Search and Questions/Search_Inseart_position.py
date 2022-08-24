@@ -16,5 +16,28 @@ def solve(n, nums, target):
         
     return left
 
+# ---------------------------
+            # OR
+# ---------------------------
+
+
+def solve(n,nums,target):
+    if target in nums:
+    
+    #output the index position of 'target' 
+        return nums.index(target)
+
+    #if target doesn't exist in 'nums' list then add it to the list
+    else:
+    
+        #add target to 'nums'
+        nums.append(target)
+        
+        #sort 'nums' list by ascending order
+        sortednums = sorted(nums)
+        
+        #return the index position of target in 'sortednums'
+        return sortednums.index(target)
+
 
 print(solve(5,[1,3,4,5,10],2))
