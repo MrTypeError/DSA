@@ -11,7 +11,7 @@ def palindrome(s):
 
 NewStr=input("enter a sring : ")
 
-if NewStr == True:
+if palindrome(NewStr) == True:
     print("Its Palindrome")
 else:
     print("Not Palindrome")
