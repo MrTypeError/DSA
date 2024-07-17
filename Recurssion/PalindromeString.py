@@ -4,7 +4,7 @@ def IsPalindrome(word,r=0,l=0):
     if l>=r:
         return True
     else:
-        if word[l]==word[r]:
+        if word[l]==word[r-1]:
             return IsPalindrome(word,r-1,l+1)
         else:
             return False

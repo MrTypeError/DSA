@@ -15,7 +15,7 @@
 
 #this is the Recursive Implimentation :-
 c="MSiumdiiipDDuuttttaa"
-# m="MimiiDutta"
+# m=""
 # f="SudipDutta"
 def traverse(c,pos,size,female='',male=''):
     if pos==size+1:
@@ -31,3 +31,4 @@ def traverse(c,pos,size,female='',male=''):
 
 
 traverse(c,0,len(c)-1)
+
